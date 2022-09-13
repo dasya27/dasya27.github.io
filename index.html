@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-family: sans-serif">
+    <h1 id="links">My links</h1>
+
+    <ol>
+        <li>
+            <a href="http://example.com">Главная страница example.com</a>
+        </li>
+        <li>
+            <a href="https://example.com">Главная страница example.com в протоколе https</a>
+        </li>
+        <li>
+            <a href="ftp://example.com/files/file.text">
+                Ссылка на файл на сервере FTP без авторизации
+            </a>
+        </li>
+        <li>
+            <a href="ftp://user:password@example.com/files/file.text">
+                Ссылка на файл на сервере FTP с авторизацией
+            </a>
+        </li>
+        <li>
+            <a href="https://html5book.ru/css-shrifty/#font-size">Фрагмент страницы другого сайта: CSS - размер шрифта</a>
+        </li>
+        <li>
+            <a href="#form">
+                Ссылка на фрагмент текущей страницы 
+            </a>
+        </li>
+        <li>
+            <a href="http://example.com/store?product=123&cost=100">С двумя параметрами</a>
+        </li>
+        <li>
+            Navigation
+            <ul>
+                <li><a href="#top" title="Начало">Начало страницы</a></li>
+                <li><a href="#links" title="Ссылки">My links</a></li>
+                <li><a href="#form" title="Форма">My form</a></li>
+                <li><a href="#bottom" title="Конец">Конец страницы</a></li>
+            </ul>
+        </li>
+        <li>
+            <a>https://html5book</a>
+        </li>
+        <li>
+            <a href="">Ссылка с пустым href</a>
+        </li>
+        <li>
+            <a href="https://example.com" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a>
+        </li>
+        <li>
+            <!--noindex-->
+                <a href="https://example.com">
+                    Ссылка, запрещенная для индексации
+                </a>
+            <!--/noindex-->
+        </li>
+        <li>
+            <p>
+                  Ссылка, которая находится внутри текста - это <a href="#">контекстная</a> ссылка.
+            </p>
+        </li>
+        <li>
+            Ссылка - изображение:
+            <br>
+            <a href="https://www.nationalgeographic.com/animals/mammals/facts/koala">
+                <img src="coala.png" style="width: 150px" alt="Ссылка - изображение" title="Ссылка-изображение">
+            </a>
+        </li>
+        <li>
+            Используем тег map:
+            <br>
+            <br>
+            <img src="figure.png" usemap = "#figuri" alt="">
+            <map name="figuri">
+                <area shape="circle" coords="111,122,75" href="https://www.nationalgeographic.com/animals/reptiles/facts/green-sea-turtle" alt="черепаха" title="черепаха">
+                <area shape="rect" coords="236,53,404,191" href="https://www.nationalgeographic.com/photo-of-the-day/photo/snail-green-leaf" alt="улитка" title="улитка">
+            </map>
+        </li>
+        <li>
+            <a href="one.html">
+                Ссылка на страницу в текущем каталоге
+            </a>
+        </li>
+        <li>
+            <a href="about/two.html">
+                Ссылка на страницу в каталоге about
+            </a>
+        </li>
+        <li>
+            <a href="../three.html">
+                Ссылка на страницу в каталоге уровнем выше
+            </a>
+        </li>
+        <li>
+            <a href="../../four.html">
+                Ссылка на страницу в каталоге двумя уровнями выше
+            </a>
+        </li>
+        <li>
+            <a href="/">
+                Сокращенная ссылка на главную страницу
+            </a>
+        </li>
+        <li>
+            <a href="/products/books.html">
+                Сокращенная ссылка на внутреннюю страницу сайта
+            </a>
+        </li>
+
+    </ol>
+
+    <br>
+    <h1 id="form">
+        My Form
+    </h1>
+    <form action="http://foo.com">
+        <label>
+            <b>Имя:</b><br><br>
+            <input type="text" name="firstname" placeholder="Алиса" style="background-color: rgb(192, 219, 254);">
+        </label> <br><br>
+
+        <label>
+            <b>Почта:</b><br><br>
+            <input type="email" name="email" placeholder="alice@gmail.com" style="background-color: rgb(167, 255, 232)">
+        </label> <br><br>
+
+        <label>
+            <b>Дата рождения:</b><br><br>
+            <input type="date" name="date">
+        </label> <br><br>
+
+        <b>Ваш пол:</b><br><br>
+        <input type="radio" name="sex" value="woman" checked>Мужской<br><br>
+        <input type="radio" name="sex" value="man">Женский<br><br>
+
+
+        <b>Количество конечностей:</b><br><br>
+        <input type="radio" name="count" value="one">Одна<br><br>
+        <input type="radio" name="count" value="two">Две<br><br>
+        <input type="radio" name="count" value="three">Три<br><br>
+        <input type="radio" name="count" value="four" checked>Четыре<br><br>
+        <br>
+
+        <label>
+            <b>Ваши суперспособности:</b><br><br>
+            <select name="select" multiple>
+                <option value="1">Бессмертие</option>
+                <option value="2">Прохождение сквозь стены</option>
+                <option value="3">Левитация</option>
+            </select>
+        </label>
+        <br><br>
+
+        <label>
+            <b>Расскажите о себе:</b><br><br>
+            <textarea name="comment" rows="5" cols="40"></textarea>
+        </label>
+        <br><br>
+
+        <label>
+            <input type="checkbox" name="a" value="yes"><b>С контрактом ознакомлен(а)</b>
+        </label><br><br>
+
+        <label>
+            <button type="submit" style="background-color: rgb(231, 165, 255); width: 150px; height: 30px">Отправить</button>
+        </label>
+    </form>
+</body>
+</html>
+

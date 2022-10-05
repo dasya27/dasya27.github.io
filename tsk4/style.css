@@ -1,0 +1,355 @@
+/* обнуление некоторых параметров */
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #92abb7;
+    font-size: 14px;
+    padding: 0;
+    font-family: Calibri, sans-serif;
+    color:#1D2D44;
+}
+
+a {
+    text-decoration: none;
+    color:#1D2D44;
+}
+
+h1  {
+    margin: 0;
+}
+
+li {
+    margin-bottom: 0.8em;
+    margin-top: 0.8em;
+}
+
+/* для заголовков */
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #40456d;
+}
+
+/* header */
+
+.container {
+    max-width: 960px;
+}
+
+header {
+    width: 100%;
+    background-color: #1D2D44;
+    margin: 0;
+    overflow: auto;
+    padding: 20px 0;
+}
+
+header .container img {
+    width: 120px;
+}
+
+
+/* можно и через id */
+#logo_text
+{
+    color: white;
+}
+
+/* контент - flex блок */
+
+nav {
+    margin-top: 10px;
+    border: 2px solid #2c1d42;
+    padding: 15px 20px 5px 20px;
+    background-color: #40456d;
+    border-radius: 4px;
+}
+
+nav a {
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 10px;
+}
+
+nav a:hover {
+    color:rgb(62, 206, 62);
+}
+
+
+/* ссылки */
+
+.links {
+    margin-top: 10px;
+    padding: 30px 50px;
+    border: 2px solid #2c1d42;
+    background-color:rgb(233, 236, 243);
+    border-radius: 4px;
+}
+
+.ol1 {
+    padding-right: 30px;
+}
+
+.ol2 {
+    padding-left: 30px;
+}
+
+.links a:hover {
+    color:#481688;
+}
+
+.links img {
+    width: 100%;
+}
+
+/* форма */
+.form_wrapper {
+    margin-top: 15px;
+    padding: 30px 20px 0 20px;
+    background-color:rgb(233, 236, 243);
+    border: 2px solid #2c1d42;
+    border-radius: 4px;
+}
+
+.form_wrapper form {
+
+    padding: 0 10px;
+    margin-top: 50px;
+}
+
+
+.form_wrapper form .mail {
+    margin-bottom:35px;
+}
+
+.form_wrapper form .mail input {
+    width:180px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1.5px solid grey;
+    margin: 15px 0 0 21px;
+}
+
+.form_wrapper form .name {
+    margin-bottom: 20px;
+}
+
+.form_wrapper form .name input{
+    width:180px;
+    height: 30px;
+    border-radius: 3px;
+    margin-left: 32px;
+    border: 1.5px solid grey;
+}
+
+.form_wrapper form .date {
+    margin-bottom:40px;
+}
+
+.form_wrapper form .date input{
+    width: 125px;
+    margin-left: 10px;
+}
+
+.tell {
+    margin-bottom: 20px;
+}
+
+.sex {
+    margin-bottom: 30px;
+}
+.sex input {
+    margin-left: 20px;
+}
+
+.arm {
+    margin-bottom: 35px;
+}
+
+.arm input {
+    margin-left: 5px;
+}
+
+
+.can {
+    margin-bottom: 35px;
+}
+
+
+
+.can select {
+    width: 270px
+}
+
+.can select option{
+    margin: 3px 0;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 10px;
+}
+
+.check_rec {
+    margin-right: 20px;
+    margin-top: 4px;
+}
+
+button {
+    display: block;
+    margin: 45px auto;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: rgb(114, 101, 179); 
+    width: 170px; 
+    height: 36px;
+
+    color: white;
+    font-size: 13px;
+    font-weight: 200;
+
+}
+
+.btn {
+    width: 100%;
+}
+
+button:hover {
+    background-color: rgb(97, 85, 156);
+}
+
+
+.in_second {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tab {
+    margin-top: 15px;
+    padding: 30px 50px 70px 50px;
+    background-color:rgb(233, 236, 243);
+    border: 2px solid #2c1d42;
+    overflow-y: scroll;
+    order:1;
+    border-radius: 4px;
+}
+
+/* таблица */
+
+table {
+    border: 1px solid rgb(74, 80, 111);
+    border-collapse: collapse; 
+    margin: 0 auto;
+    text-align: center;
+    width:90%;
+    background-color: #FFF;
+}
+
+/* границы таблицы */
+
+th {
+    border: 1px solid rgb(74, 80, 111);
+    height: 50px;
+}
+
+tr {
+    border: 1px solid rgb(74, 80, 111);
+}
+
+td {
+    border: 1px solid rgb(74, 80, 111);
+}
+
+/* отдельно верхние */
+
+.food, .num,.anim, .live {
+    background-color: #9097c9;
+}
+.food {
+    width: 50%;
+}
+
+.num {
+    width: 6%;
+}
+
+.anim {
+    width: 13%;
+}
+
+.live {
+    width: 31%;
+}
+
+/* четные нечетные */
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(219, 221, 251);
+}
+
+/* футер таблицы*/
+
+tfoot {
+    background-color: rgb(192, 195, 229);
+}
+
+/* футер */
+
+footer {
+    width: 100%;
+    height: 130px;
+    background-color: #1D2D44;
+    font-size: 30px;
+    padding-top: 50px;
+    text-align: center;
+    color:aliceblue;
+    font-weight: 300;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.first_wrapper, .second_wrapper 
+{
+    margin: 0 auto;
+    max-width: 270px;
+}
+
+@media screen and (min-width:768px)
+{
+    .content 
+    {
+        max-width: 960px;
+    }
+
+    .tab
+    {
+        order:0;
+    }
+
+    .content .form_wrapper form
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: start;
+    }
+
+    .first_wrapper, .second_wrapper 
+    {
+        margin: none;
+        max-width: none;
+    }
+
+
+    .content nav 
+    {
+        justify-content: space-around;
+        flex-direction: row;
+    }
+}
+
+

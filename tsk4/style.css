@@ -131,11 +131,11 @@ nav a:hover {
     margin: 15px 0 0 21px;
 }
 
-.form_wrapper form .name {
+.name {
     margin-bottom: 20px;
 }
 
-.form_wrapper form .name input{
+.name input{
     width:180px;
     height: 30px;
     border-radius: 3px;
@@ -143,11 +143,11 @@ nav a:hover {
     border: 1.5px solid grey;
 }
 
-.form_wrapper form .date {
+.date {
     margin-bottom:40px;
 }
 
-.form_wrapper form .date input{
+.date input{
     width: 125px;
     margin-left: 10px;
 }
@@ -171,12 +171,9 @@ nav a:hover {
     margin-left: 5px;
 }
 
-
 .can {
     margin-bottom: 35px;
 }
-
-
 
 .can select {
     width: 270px
@@ -193,11 +190,6 @@ nav a:hover {
     margin-top: 10px;
 }
 
-.check_rec {
-    margin-right: 20px;
-    margin-top: 4px;
-}
-
 button {
     display: block;
     margin: 45px auto;
@@ -211,7 +203,6 @@ button {
     color: white;
     font-size: 13px;
     font-weight: 200;
-
 }
 
 .btn {
@@ -221,7 +212,6 @@ button {
 button:hover {
     background-color: rgb(97, 85, 156);
 }
-
 
 .in_second {
     display: flex;
@@ -313,43 +303,44 @@ footer {
     margin-top: 20px;
 }
 
-.first_wrapper, .second_wrapper 
-{
+.first_wrapper, .second_wrapper {
     margin: 0 auto;
-    max-width: 270px;
+    text-align: center;
+}
+
+.check {
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
 }
 
 @media screen and (min-width:768px)
 {
-    .content 
-    {
+    .content {
         max-width: 960px;
     }
 
-    .tab
-    {
+    .tab {
         order:0;
     }
 
-    .content .form_wrapper form
-    {
+    .form_wrapper form {
         flex-direction: row;
         flex-wrap: wrap;
         align-items: start;
     }
 
-    .first_wrapper, .second_wrapper 
-    {
+    .first_wrapper, .second_wrapper {
         margin: none;
         max-width: none;
+        text-align: left;
     }
 
-
-    .content nav 
-    {
+    .content nav {
         justify-content: space-around;
         flex-direction: row;
     }
+
 }
 
 

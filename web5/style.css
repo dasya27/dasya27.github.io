@@ -1,0 +1,80 @@
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    background-color: rgb(84, 84, 135);
+    margin: 60px auto;
+    width: 400px;
+    border-radius: 5px;
+    padding-top: 30px;
+    height: 400px;
+    text-align: center;
+
+    font-family: sans-serif;
+}
+
+.box_title {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    color:rgb(255, 255, 255)
+}
+.box_number, .box_price {
+    margin-top: 30px;
+    height: 28px;
+    width: 200px;
+    border-radius: 3px;
+    border: none;
+
+}
+
+
+.box_btn {
+    display: block;
+    margin: 30px auto;
+    width: 200px;
+    height: 28px;
+    border-radius: 3px;
+    border: none;
+    background: rgb(253, 51, 175);
+    box-shadow: 4px grey;
+    font-weight: 500;
+    color:beige;
+}
+
+.box_btn:hover {
+    background: rgb(236, 167, 18);
+    cursor: pointer;
+}
+
+.box_ans_text {
+    font-size: 20px;
+}
+
+.box_ans {
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+}
+
+.box_ans_text {
+    color:aliceblue;
+}
+
+#box_ans_out {
+    width: 90px;
+    height: 25px;
+    background: rgb(255, 255, 255);
+    border-radius: 3px;
+    border: none;
+
+    padding-top: 5px;
+}
+
+

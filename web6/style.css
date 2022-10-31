@@ -1,87 +1,76 @@
-
-body {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+.box {
+    width: 500px;
+    height: 650px;
+    margin: 10px auto;
+    background-color: rgb(23, 36, 61);
+    border-radius: 7px;
+    padding: 4px 30px;
+    font-family: sans-serif;
+    color: white;
 }
 
-.box {
-    background-color: rgb(84, 84, 135);
-    margin: 60px auto;
-    width: 400px;
-    border-radius: 5px;
-    padding-top: 30px;
-    height: 400px;
-    text-align: center;
-    box-shadow: 0 14px 50px rgba(105, 105, 105, 0.25), 0 10px 10px rgba(200, 159, 244, 0.22);
+.form-control {
+    margin-top: 30px;
+    width: 200px;
+}
+
+.box_logo {
+    width: 90px;
+    display:block;
+    margin: 0 auto; 
 }
 
 .box_title {
-    margin-bottom: 10px;
-    margin-top: 20px;
-    font-size: 27px;
-    font-weight: 600;
-    color:rgb(255, 255, 255)
-}
-.box_number, .box_price {
-    margin-top: 30px;
-    height: 28px;
-    width: 193px;
-    border-radius: 3px;
-    border: none;
-
-    padding-left: 7px;
-    box-shadow: 0 10px 3px -10px rgba(0,0,0,0.3);
+    font-size: 30px;
+    text-align: center;
 }
 
-
-.box_btn {
-    display: block;
-    margin: 30px auto;
-    width: 200px;
-    height: 28px;
-    border-radius: 3px;
-    border: none;
-    background: rgb(80 158 45);
-    box-shadow: 4px grey;
-    font-weight: 600;
-    color:beige;
-
-    box-shadow: 0px 0px 8px -3px #000000;
+.check {
+    display: inline-block;
 }
 
-.box_btn:hover {
-    background: rgb(65, 145, 27);
-    cursor: pointer;
+.class_wrapper, .bag_wrapper {
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-between;
+    align-items: start;
+    padding: 2px;
 }
 
-.box_ans_text {
-    font-size: 20px;
-}
-
-.box_ans {
-    margin: 20px auto;
+.class_wrapper2, .bag_wrapper2 {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    width: 250px;
+}
+
+
+.btn-warning {
+    display: block;
+    height: 35px;
     width: 200px;
-}
-
-.box_ans_text {
-    color:aliceblue;
-}
-
-#box_ans_out {
-    width: 90px;
-    height: 25px;
-    background: rgb(255, 255, 255);
-    border-radius: 3px;
-    border: none;
-
-    color:rgb(8, 113, 31);
+    margin: 40px auto 0 auto;
+    font-size: 16px;
     font-weight: 600;
-    padding-top: 3px;
-    box-shadow: 0 10px 3px -10px rgba(0,0,0,0.3);
+    padding: 0;
+}
+.box_ans  {
+    text-align: center;
+    margin-top: 0;
+    font-size: 19px;
 }
 
+.answer {
+    font-size: 19px;
+    text-align: center;
+}
 
+.box_ans_img {
+    width: 50px;
+    display: block;
+    margin: 1px auto;
+}
+
+.only_b, .only_hand, .only_e, .box_ans {
+    display: none;
+    margin-top: 30px;
+}

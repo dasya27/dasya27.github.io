@@ -4,39 +4,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    
+    <title>web6</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
+    <script src="main.js" defer>
+    </script>
 </head>
 <body>
-    
     <div class="box">
-        <form action="#">
-            <div class="box_title">
-                Calculator
-            </div>
-            <input type="text" class="box_number" placeholder="Number" value="">
-            <input type="text" class="box_price" placeholder="Price" value="">
-            
-            <button type="submit" class="box_btn">
-                COUNT
-            </button>
-
-            <div class="box_ans">
-                <div class="box_ans_text">
-                    Answer:
-                </div>
-                <div id="box_ans_out">
-                    
-                </div>
-            </div>
-        </form>
         
+        <div class="box_head">
+            <img src="https://cdn-icons-png.flaticon.com/512/3774/3774303.png" alt="" class="box_logo">
+        <div class="box_title">
+            Your Plane
+        </div>
+        </div>
+
+        <form action="">
+
+        <br>
+        <select  class="form-select box_select" onchange="getCourse()">
+            <option selected>
+                Куда полетим?
+            </option>
+            <option class="box_option" value="1">
+                Дубай
+            </option>
+            <option class="box_option" value="2">
+                Германия
+            </option>
+            <option class="box_option" value="3">
+                США
+            </option>
+            <option class="box_option" value="4">
+                Испания
+            </option>
+            <option class="box_option" value="5">
+                Португалия
+            </option>
+        </select>
+        <input type="text" class="form-control" placeholder="Количество билетов" value="">
+
+        <div class="only_b">
+            К сожалению, остался только бизнес класс)
+        </div>
+
+        
+        <div class="class_wrapper">
+            <b>Качество полета:</b>
+            <div class="class_wrapper2">
+                <div class="form-check check">
+                    <input class="form-check-input class-check-e" type="radio" checked name="check" value = "1" onchange="getQual()">
+                    <label class="form-check-label" >
+                      Эконом класс
+                    </label>
+                </div>
+                <div class="form-check check">
+                    <input class="form-check-input class-check-b" type="radio" name="check" value = "2" onchange="getQual()">
+                    <label class="form-check-label" >
+                      Бизнес класс
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="bag_wrapper">
+            <b>С собой:</b>
+            <div class="bag_wrapper2">
+                <div class="form-check check">
+                    <input class="form-check-input bag-check-h" type="checkbox" name="check" value="1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Ручная кладь
+                    </label>
+                </div>
+                <div class="form-check check">
+                    <input class="form-check-input bag-check-b" type="checkbox" name="check" value="2" onclick="getBag()">
+                    <label class="form-check-label" >
+                      Багаж
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="only_hand">
+            К сожалению, остались билеты только с ручной кладью
+        </div>
+
+        <button type="button" class="btn btn-warning" onclick="buy()">КУПИТЬ</button>
+
+        <div class="box_ans">
+            <img src="https://cdn-icons-png.flaticon.com/512/5629/5629366.png" alt="" class="box_ans_img">
+            Спасибо за доверие! <br>
+            <div class="answer">
+
+            </div>
+        </div>
+        
+        </form>
     </div>
 
-    <script src="main.js"></script>
+    
 </body>
 </html>

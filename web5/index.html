@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-
+    <title>web5</title>
+    
+    
     <link rel="stylesheet" href="style.css">
+
+    <script src="main.js" defer></script>
 </head>
 <body>
     
@@ -19,15 +21,16 @@
             <input type="text" class="box_number" placeholder="Number" value="">
             <input type="text" class="box_price" placeholder="Price" value="">
             
-            <button type="submit" class="box_btn">
-                COUNT
-            </button>
+            <!-- здесь в атрибуте onclick мы указываем, что нужно сделать при нажатии на кнопку -->
+            <!-- В этом случае мы вызываем функцию -->
+
+            <input type="button" class="box_btn" value="COUNT" onclick="answer()">
 
             <div class="box_ans">
                 <div class="box_ans_text">
                     Answer:
                 </div>
-                <div id="box_ans_out">
+                <div class="box_ans_out">
                     
                 </div>
             </div>
@@ -35,6 +38,5 @@
         
     </div>
 
-    <script src="main.js"></script>
 </body>
 </html>

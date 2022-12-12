@@ -6,7 +6,8 @@ let msg = document.querySelector('.message');
 let toPopup = document.querySelector('.btn__popup');      //кнопка на сайт
 let popup__bg  = document.querySelector('.popup__bg');    //фон попапа
 let popup = document.querySelector('.popup');             //попап
-let close = document.querySelector('.popup__close');      //крестик
+let close = document.querySelector('.popup__close');      //
+
 
 //сохраняем в local storage 
 function save()
@@ -48,17 +49,19 @@ document.addEventListener('DOMContentLoaded', () => {
     msg.oninput = save;       //все изменения сохранятся
     check.oninput = save; 
 
+
     //при нажатии на кнопку открывается попап
-    toPopup.addEventListener('click', (e) => 
+    toPopup.addEventListener('click', function()
     {
-         e.preventDefault();
+      console.log(history.length);
+        history.pushState({ page: 2 }, 'modal', '?modal');      //меняем URL
+
         //реагирут на нажатие назад-вперед
         window.onpopstate = function () {
-            popup.classList.remove('popup__open');
-            popup__bg.classList.remove('popup__bg__open');
-          };
-
-        history.pushState({ page: 1 }, 'modal', '?modal');      //меняем URL
+                         
+          popup.classList.remove('popup__open');
+          popup__bg.classList.remove('popup__bg__open');
+        };
 
         popup.classList.add('popup__open');
         popup__bg.classList.add('popup__bg__open');

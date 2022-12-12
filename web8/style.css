@@ -1,0 +1,188 @@
+body {
+    box-sizing: border-box;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+}
+
+.btn__popup {
+    height: 50px;
+    width: 200px;
+    position:absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 100px;
+    background-color: rgb(98, 168, 106);
+    border:none;
+    border-radius:20px;
+    color:rgb(248, 248, 248);
+    font-size: 20px;
+    cursor:pointer;
+}
+
+.body__dark {
+    background: rgba(52, 132, 77, 0.6);
+    transition:0.5s;
+}
+
+img {
+    width: 300px;
+}
+
+.popup__close {
+    position: absolute;
+    margin-left: 95%;
+    left: 0;
+    right: 0;
+    top: 10px;
+
+    color:rgb(2, 33, 61);
+    border: none;
+    background-color: rgb(249, 249, 249);
+    cursor:pointer;
+
+}
+
+.popup {
+    width: 800px;
+    height: 500px;
+    background-color: rgb(249, 249, 249);
+    border-radius: 9px;
+    position:relative;
+
+    opacity: 0;
+    visibility:hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 20px;
+    transition: 0.5s;
+
+
+    position:absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 30px;
+    
+}
+
+.popup__open {
+    opacity: 1;
+    visibility:visible;
+    transition:0.5s;
+}
+
+
+
+.popup__title {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+input {
+    display: block;
+    height: 15px;
+    width: 270px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+
+    background-color: rgb(228, 220, 241);
+}
+
+textarea {
+    display: block;
+    margin: 30px auto;
+    border: none;
+    border-radius: 15px;
+    padding: 12px;
+    width: 268px;
+    border-radius: 15px;
+    background-color: rgb(228, 220, 241);
+}
+
+.agree {
+    color:rgb(52, 53, 78);
+    font-size: 13px;
+}
+
+.btn {
+    height: 35px;
+    width: 275px;
+    display: block;
+    margin: 30px auto;
+    background-color: rgb(226, 126, 144);
+    border: none;
+    cursor: pointer;
+    color: white;
+    padding:5px;
+    font-weight: 600;
+    border-radius: 15px;
+}
+
+#check
+{
+    display: inline;
+    margin: 0;
+    width: 15px;
+    margin-right: 10px;
+}
+
+.agree {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 275px;
+}
+
+.send-success {
+    text-align: center;
+}
+
+@media (max-width: 600px)
+{
+    .popup {
+        width: 90%;
+        display: block;
+        padding: 10px;
+        height: 570px;
+    }
+    
+    img {
+        width: 125px;
+        display: block;
+        margin: 10px auto;
+    }
+    input {
+        width: 80%;
+    }
+    
+    textarea {
+        width: 80%;
+    }
+
+    .popup__close {
+        margin-left: 90%;
+    }
+
+    .btn {
+        width: 80%;
+    }
+    .agree {
+        width: 80%;
+    }
+
+}

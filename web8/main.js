@@ -54,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
          e.preventDefault();
         //реагирут на нажатие назад-вперед
         window.onpopstate = function () {
-            window.history.back();                //возвращаемся назад
             popup.classList.remove('popup__open');
             popup__bg.classList.remove('popup__bg__open');
           };

@@ -49,9 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
     check.oninput = save; 
 
     //при нажатии на кнопку открывается попап
-    toPopup.addEventListener('click', function()
+    toPopup.addEventListener('click', (e) => 
     {
-
+         e.preventDefault();
         //реагирут на нажатие назад-вперед
         window.onpopstate = function () {
             window.history.back();                //возвращаемся назад

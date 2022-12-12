@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <button class="btn__popup">
+        feedback
+    </button>
+
+    <div class="popup">
+        <div class="popup__img">
+            <img src="https://cdn-icons-png.flaticon.com/512/4193/4193247.png" alt="">
+        </div>
+        <div class="popup__content">
+            <button class="popup__close">X</button>
+            <div class="popup__title">
+                Contact us
+            </div>
+            <form id="form">
+                <input type="text" class="name" name="name" placeholder="Name">
+                <input type="text" class="email" name="email" placeholder="Email">
+                <textarea name="message" class="message"cols="25" rows="5" placeholder="Message"></textarea>
+                
+                <div class="agree">
+                    <input type="checkbox" id="check" name="check" value="yes">Processing of personal data (consent)
+                </div>
+    
+                <button class="btn" type="submit" >Send</button>
+    
+            </form>
+        </div>
+    </div>
+
+    
+
+    <script src="main.js"></script>
+</body>
+</html>

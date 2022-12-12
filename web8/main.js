@@ -1,23 +1,21 @@
 let names = document.querySelector('.name');
-let email = document.querySelector('.email');
+let email = document.querySelector('.email');            //получаем переменные
 let msg = document.querySelector('.message');
 
 
-let toPopup = document.querySelector('.btn__popup');  //кнопка на сайт
-let body  = document.querySelector('body');
-let popup = document.querySelector('.popup');         //попап
-let close = document.querySelector('.popup__close');
+let toPopup = document.querySelector('.btn__popup');      //кнопка на сайт
+let popup__bg  = document.querySelector('.popup__bg');    //фон попапа
+let popup = document.querySelector('.popup');             //попап
+let close = document.querySelector('.popup__close');      //крестик
 
 //сохраняем в local storage 
 function save()
 {
-    localStorage.setItem('Имя', names.value);
-    localStorage.setItem('Почта', email.value);
+    localStorage.setItem('Имя', names.value);       
+    localStorage.setItem('Почта', email.value);      //сохраняем ключ - значение
     localStorage.setItem('Сообщение', msg.value);
 
     //сохраняем значение чекбокса
-    localStorage.setItem('Чекбокс', check.value);
-
     if (check.checked) {
         localStorage.setItem('Чекбокс', 1);
       } 
@@ -28,52 +26,51 @@ function save()
 }
 
 //восстанавливаем значения
+//это происходит после загрузки страницы
 document.addEventListener('DOMContentLoaded', () => {
+    
     names.value = localStorage.getItem('Имя');
-    email.value = localStorage.getItem('Почта');
-    msg.value = localStorage.getItem('Сообщение');
+    email.value = localStorage.getItem('Почта');       //достаем из localStorage значения
+    msg.value = localStorage.getItem('Сообщение');     //устанавливаем их на места
 
     let checkBox = localStorage.getItem('Чекбокс');     
     
-    if (checkBox == 1) {
-        check.checked = true;
-    } else if (checkBox == 0) {
+    if (checkBox == 1) 
+    {
+        check.checked = true;                 //восстанавливаем чек-бокс
+    } 
+    else if (checkBox == 0) {
         check.checked = false;
     }
 
     names.oninput = save;
-    email.oninput = save;     //когда пользователь будет изменять значения 
-    msg.oninput = save; 
+    email.oninput = save;     //если пользователь будет изменять значения 
+    msg.oninput = save;       //все изменения сохранятся
     check.oninput = save; 
 
-    //при нажатии открывается попап
+    //при нажатии на кнопку открывается попап
     toPopup.addEventListener('click', function()
     {
-        window.history.pushState(
-        
-            {},
-            '',
-            'feedback.html'
-        )
 
+        //реагирут на нажатие назад-вперед
         window.onpopstate = function () {
-            window.history.back();
+            window.history.back();                //возвращаемся назад
             popup.classList.remove('popup__open');
-            body.classList.remove('body__dark');
+            popup__bg.classList.remove('popup__bg__open');
           };
 
-        history.pushState({ page: 1 }, 'feedback', '?feedback');
+        history.pushState({ page: 1 }, 'modal', '?modal');      //меняем URL
+
         popup.classList.add('popup__open');
-        body.classList.add('body__dark');
-        //возвращаемся назад при нажатии назад
+        popup__bg.classList.add('popup__bg__open');
     
     });
 
-    close.addEventListener('click', function()
+    close.addEventListener('click', function()   //реагирует на нажатие крестика
     {
-        popup.classList.remove('popup__open');
-        body.classList.remove('body__dark');
-        window.history.back();                     //возвращаемся назад по истории
+      window.history.back();                     //возвращаемся назад по истории  
+      popup.classList.remove('popup__open');
+      popup__bg.classList.remove('popup__bg__open');
     }
     );
 
@@ -100,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 email.value = localStorage.getItem('Почта');     //обнуляем все
                 msg.value = localStorage.getItem('Сообщение');
 
-                cb.checked = false;
+                check.checked = false;
               }
             },
             error: function (jqxhr, status, errorMsg) {
